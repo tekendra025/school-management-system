@@ -26,7 +26,10 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+  origin: "https://school-management-system-ivory-xi.vercel.app",
+  credentials: true
+}));
 app.use(cookieParser());
 
 // Static Folder
