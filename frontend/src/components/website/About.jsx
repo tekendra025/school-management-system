@@ -3,6 +3,7 @@ import {
     School,
     GraduationCap,
 } from "lucide-react";
+import { BASE_URL } from "../../services/api";
 
 const About = () => {
 
@@ -13,7 +14,7 @@ const About = () => {
 
     return (
 
-        <section className="relative overflow-hidden py-28 px-6 lg:px-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+        <section className="relative overflow-hidden py-28 px-6 lg:px-16 bg-linear-to-br from-slate-50 via-blue-50 to-indigo-50">
 
             {/* Floating Background Effects */}
             <div className="absolute top-10 left-10 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl animate-pulse"></div>
@@ -26,21 +27,21 @@ const About = () => {
                 <div className="relative group">
 
                     {/* Glow */}
-                    <div className="absolute -inset-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-[40px] blur-3xl opacity-20 group-hover:opacity-40 transition-all duration-700"></div>
+                    <div className="absolute -inset-6 bg-linear-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-[40px] blur-3xl opacity-20 group-hover:opacity-40 transition-all duration-700"></div>
 
                     {/* Main Image */}
-                    <div className="relative overflow-hidden rounded-[32px] shadow-2xl">
+                    <div className="relative overflow-hidden rounded-4xl shadow-2xl">
 
                         <img
                             src={
                                 aboutReducer?.image
-                                    ? `http://localhost:8000/${aboutReducer.image}`
+                                    ? `${BASE_URL}/${aboutReducer.image}`
                                     : "https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop"
                             }
                             alt="About"
                             className="
                                 w-full
-                                h-[550px]
+                                h-137.5
                                 object-cover
                                 transition-all
                                 duration-700
@@ -55,7 +56,7 @@ const About = () => {
 
                         <div className="flex items-center gap-4">
 
-                            <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white flex items-center justify-center">
+                            <div className="w-14 h-14 rounded-2xl bg-linear-to-r from-blue-500 to-indigo-600 text-white flex items-center justify-center">
 
                                 <GraduationCap />
 
@@ -96,7 +97,7 @@ const About = () => {
 
                         Welcome To
 
-                        <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                        <span className="block bg-linear-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
                             {aboutReducer?.schoolName}
                         </span>
 
@@ -112,7 +113,7 @@ const About = () => {
                     </p>
 
                     {/* Quote */}
-                    <div className="mt-10 p-6 rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-2xl">
+                    <div className="mt-10 p-6 rounded-3xl bg-linear-to-r from-blue-600 to-indigo-700 text-white shadow-2xl">
 
                         <p className="text-lg italic leading-8">
                             “Education is not just about acquiring knowledge;
