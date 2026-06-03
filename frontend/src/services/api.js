@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // SERVER URL
-export const BASE_URL = "http://localhost:8000";
+export const BASE_URL = "https://school-management-system-vrne.onrender.com";
 
 // API INSTANCE
 const API = axios.create({
