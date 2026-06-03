@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import API from "../../services/api";
+import API, { BASE_URL } from "../../services/api";
 
 function Gallery() {
     const [gallery, setGallery] = useState([]);
@@ -54,11 +54,11 @@ function Gallery() {
                                             className="overflow-hidden rounded-2xl shadow-lg bg-white"
                                         >
                                             <img
-                                                src={`http://localhost:8000/${image}`}
+                                                src={`${BASE_URL}/${image}`}
                                                 alt={`${item.title}-${index}`}
                                                 onClick={() =>
                                                     setSelectedImage(
-                                                        `http://localhost:8000/${image}`
+                                                        `${BASE_URL}/${image}`
                                                     )
                                                 }
                                                 className="w-full h-64 object-cover cursor-pointer hover:scale-110 transition duration-500"
