@@ -9,6 +9,7 @@ import {
     useSelector,
 } from "react-redux";
 import { FaClock, FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { BASE_URL } from "../../services/api";
 
 
 function Navbar() {
@@ -28,7 +29,7 @@ function Navbar() {
     return (
         <>
             {/* TOP BAR */}
-            <div className="hidden md:block bg-gradient-to-r from-blue-700 to-indigo-700 text-white">
+            <div className="hidden md:block bg-linear-to-r from-blue-700 to-indigo-700 text-white">
 
                 <div className="max-w-7xl mx-auto px-6 lg:px-12 py-2 flex items-center justify-between">
 
@@ -135,7 +136,7 @@ function Navbar() {
                             settings?.logo && (
 
                                 <img
-                                    src={`http://localhost:8000/${settings.logo}`}
+                                    src={`${BASE_URL}/${settings.logo}`}
                                     alt="Logo"
                                     className="w-14 h-14 rounded-full object-cover border"
                                 />
