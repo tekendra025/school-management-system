@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import API from "../../services/api";
+import API, { BASE_URL } from "../../services/api";
 import { FaQuoteLeft } from "react-icons/fa";
 
 export default function PrincipalMessage() {
@@ -30,7 +30,7 @@ export default function PrincipalMessage() {
     );
 
     return (
-        <section className="relative py-24 px-6 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+        <section className="relative py-24 px-6 overflow-hidden bg-linear-to-br from-blue-50 via-white to-indigo-50">
 
             {/* Background Blur Effects */}
             <div className="absolute top-0 left-0 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>
@@ -48,12 +48,12 @@ export default function PrincipalMessage() {
                         <div className="relative">
 
                             {/* Glow */}
-                            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 blur-xl opacity-30 animate-pulse"></div>
+                            <div className="absolute inset-0 rounded-full bg-linear-to-r from-blue-500 to-indigo-600 blur-xl opacity-30 animate-pulse"></div>
 
                             <img
                                 src={
                                     principal?.image
-                                        ? `http://localhost:8000/${principal.image}`
+                                        ? `${BASE_URL}/${principal.image}`
                                         : "https://via.placeholder.com/400"
                                 }
                                 alt={principal?.name}
