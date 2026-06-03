@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* for newsticker */
+/* News Ticker */
+
+.ticker-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: ticker-scroll 30s linear infinite;
+}
+
+.ticker-track:hover {
+    animation-play-state: paused;
+}
+
+.ticker-item {
+    margin: 0 3rem;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+@keyframes ticker-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
