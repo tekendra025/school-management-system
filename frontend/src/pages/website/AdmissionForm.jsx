@@ -119,8 +119,8 @@ function AdmissionForm() {
                     <form
                         onSubmit={handleSubmit}
                     >
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">\
-                            {/* FULL NAME */}\
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* FULL NAME */}
                             <input
                                 type="text"
                                 name="fullName"
