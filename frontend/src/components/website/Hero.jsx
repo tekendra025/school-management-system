@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { BASE_URL } from '../../services/api';
 
 const Hero = () => {
     const settingsReducer = useSelector((state) => state.settings.settings);
@@ -11,7 +12,7 @@ const Hero = () => {
 
                 <img
                     src={aboutReducer?.image
-                        ? `http://localhost:8000/${aboutReducer.image}`
+                        ? `${BASE_URL}/${aboutReducer.image}`
                         : "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1600&auto=format&fit=crop"}
                     alt="School"
                     className="absolute inset-0 w-full h-full object-cover"
@@ -25,7 +26,6 @@ const Hero = () => {
                     <h1 className="text-5xl md:text-7xl font-extrabold leading-tight max-w-4xl">
                         {settingsReducer?.schoolName}
                     </h1>
-
 
                     <div className="flex gap-5 mt-10 flex-wrap">
 
