@@ -92,7 +92,7 @@ function SettingsManagement() {
                             settings.googleMapLink || "",
 
                         facebookPageUrl:
-                            settings.facebookPageUrl || "",
+                            settings.socialLinks?.facebookPageUrl || "",
 
                         seoKeywords:
                             settings.seoKeywords || "",
